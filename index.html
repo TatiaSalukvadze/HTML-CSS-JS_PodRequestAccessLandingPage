@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script>
+      function check() {
+        let input = document.getElementById("input");
+        let error = document.getElementById("error");
+        let forbutts = document.getElementById("formargin");
+
+        var computedStyle = getComputedStyle(forbutts);
+        var marg = parseInt(computedStyle.marginBottom);
+        error.style.display = "block";
+        var computedStyleer = window.getComputedStyle(error);
+        if (input.value.trim() == "") {
+          if (error.innerHTML == "")
+            forbutts.style.marginBottom = marg - 28 + "px";
+          error.innerHTML = "Oops! Please check your email";
+          error.style.color = "#FB3E3E";
+        } else {
+          if (error.innerHTML == "")
+            forbutts.style.marginBottom = marg - 28 + "px";
+          error.innerHTML = "submited";
+          error.style.color = "green";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <img src="./images/desktop/logo.svg" alt="logo" class="logo" />
+    <div class="main">
+      <h1>Publish your podcasts <span>everywhere.</span></h1>
+      <p>
+        Upload your audio to Pod with a single click. We’ll then distribute your
+        podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
+        more!
+      </p>
+      <div class="icons">
+        <img src="./images/desktop/spotify.svg" alt="icon" id="spot" />
+        <img src="./images/desktop/apple-podcast.svg" alt="icon" id="appod" />
+        <img
+          src="./images/desktop/google-podcasts.svg"
+          alt="icon"
+          id="gogpod"
+        />
+        <img src="./images/desktop/pocket-casts.svg" alt="icon" id="pockcast" />
+      </div>
+      <div class="buttsout" id="formargin">
+        <div class="butts">
+          <input type="text" placeholder="Email address" id="input" />
+          <button type="submit" onclick="check()">Request Access</button>
+        </div>
+        <p id="error"></p>
+      </div>
+    </div>
+    <img src="./images/desktop/bg-pattern-dots.svg" class="dots" />
+  </body>
+</html>

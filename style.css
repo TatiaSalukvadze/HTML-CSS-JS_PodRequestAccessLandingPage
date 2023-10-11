@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&family=Chivo&family=Red+Hat+Display:wght@500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(18, 23, 37, 0.93),
+      rgba(18, 23, 37, 0.93)
+    ),
+    url("images/mobile/image-host.jpg");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Chivo", sans-serif;
+}
+.logo {
+  margin-top: 62px;
+  margin-bottom: 57px;
+}
+.main {
+    display:flex;
+    flex-direction: column;
+  width: 327px;
+}
+.main h1 {
+  color: #54e6af;
+  text-align: center;
+  /* font-family: Chivo; */
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 38px;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+.main h1 span {
+  color: #fff;
+}
+.main p {
+  color: #c2cbe5;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-bottom: 33px;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+ input,
+button {
+  width: 327px;
+  height: 46px;
+  border-radius: 28px;
+  border: 0;
+}
+input {
+  background: #2c344b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 9px 32px;
+}
+button {
+  background: #54e6af;
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.5);
+  margin-top: 16px;
+color: #121725;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.dots{
+    display:none;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("images/tablet/image-host.jpg");
+    background-size: auto;
+    background-position: right top;
+    background-color: #121725;
+    align-items: start;
+    margin-left: 39px;
+    position:relative;
+  }
+  .main {
+    width: 635px;
+    height: 509px;
+    background-color: #121725;
+    margin-bottom:257px;
+  }
+  .logo {
+    margin-top:51px;
+    margin-bottom: 152px;
+  }
+  .main h1 {
+    font-size: 48px;
+    line-height: 56px;
+    width: 635px;
+    text-align: left;
+    padding-top: 93px;
+    order:1;
+  }
+
+  .main p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 28px;
+    width: 445px;
+    padding-top: 31px;
+    order: 2;
+  }
+  .icons {
+    width: 80%;
+    order: 4;
+  }
+  .dots {
+      display: block;
+  }
+
+ .dots{
+    position:absolute;
+    bottom:0;
+ }
+ .butts{
+    width: 427px;
+        height: 56px;
+        border-radius: 28px;
+            background: #2C344B;
+            display:flex;
+            justify-content: space-between;
+ }
+ .buttsout{
+    order:3;
+    margin-bottom: 60px;
+ }
+ .buttsout p{
+    padding:0;
+    padding-left:32px;
+        font-size: 12px;
+        font-weight: 400;
+        display:none;
+ }
+button,input{
+    width: 162px;
+        height: 46px;
+        margin:5px;
+}
+.icons #spot{
+    width: 96px;
+        height: 29px;
+}
+.icons #appod {
+width: 78px;
+    height: 29px;
+}
+.icons #pockcast {
+width: 129px;
+    height: 26px;
+}
+.icons #gogpod {
+width: 125px;
+    height: 18px;
+}
+}
+@media (min-width: 1440px) {
+    body {
+        background-image: url("images/desktop/image-host.jpg");
+        background-position: right center;
+        margin-left: 165px;
+    }
+        .logo {
+            margin-top: 102px;
+            margin-bottom: 103px;
+        }
+        .main{
+            width: 723px;
+                height: 509px;
+                margin-bottom: auto;
+        }
+                 .dots {
+                     right: 0;
+                     top:718px;
+                 }
+}
+
+
+/* .butts:after{
+    content:'error'
+} */
